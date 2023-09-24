@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,20 +13,20 @@
   <link rel="stylesheet" href="/css/main.css">
 	<script src="https://kit.fontawesome.com/388bd0613c.js" crossorigin="anonymous"></script>
 	<style>
-	.bottom-footer {
-	  position: absolute;
-	  bottom: 0;
-	  width: 100%;
-	  text-align: center;
+    .bottom-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+	.dropdown-content {
+	  /* ...existing styles... */
+	  margin-bottom: 20px; /* Adds space below each section */
 	}
-<style>
-  .content {
-    display: none;
-  }
-  .content.open {
-    display: block;
-  }
-</style>
+	
+	.open {
+	  /* Logic to make it expanded, possibly 'display: block;' */
+	}
   </style>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -36,6 +34,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -71,17 +70,27 @@
         <hr>
 
         <div class="row">
-          <p>						
-				I'm the Associate Director of <a href="https://epochai.org/">Epoch</a>, and research affiliate at <a href="https://www.csail.mit.edu/">MIT CSAIL</a>. I work on the intersection of economics and computing, focusing on the technical and economic basis for AI automation.        </div>
+          <p>
+					I am an interdisciplinary AI researcher studying the progress, impacts, and responsible development of artificial intelligence. My research combines perspectives from computer science, economics, public policy, and forecasting to analyze AI trends and their implications for society. 
+						
+					I'm a member of technical staff at <a href="https://www.csail.mit.edu/">MIT CSAIL</a>. I'm also the Associate Director of <a href="https://epochai.org/">Epoch</a>. I hold an MPhil in Economics from the University of Cambridge, where I received the Stevenson Prize for top academic performance..
+        </div>
 
-        <div class="row">
-					<div id="research">
-          </div>
           <h2><a id="research"></a>Research</h2>
           <hr>
-				  <p>
-				<h3>AI and Economic Impacts <i class="fas fa-angle-down"></i></h3>
-			   <div class="dropdown-content">
+
+		<h4 class="dropdown-title">AI and Economic Impacts <i class="fas fa-angle-down"></i></h4>
+	    <div class="dropdown-content">
+
+				<p>
+            <strong>Explosive growth from AI automation: A review of the arguments</strong><br>
+	           Ege Erdil, <b>Tamay Besiroglu</b><br>
+            <div class="btn-group-xs">
+              <a href="https://arxiv.org/abs/2309.11690"
+              class="btn btn-default">Paper</a>
+            </div>
+          </p>
+				<p>
             <strong>Economic impacts of AI-augmented R&D</strong><br>
 	           <b>Tamay Besiroglu</b>, Nicholas Emery-Xu, Neil Thompson<br>
             <div class="btn-group-xs">
@@ -90,17 +99,8 @@
 		          <a href="https://github.com/Besiroglu/webpage/blob/master/Presentations/Presentation_Economic_impacts_of_AI_augmented_R_D__Copy.pdf"
 	              class="btn btn-default">Slides</a>
             </div>
-				</div>
           </p>
-          <p>
-            <strong>Please report your compute</strong><br>
-	           Jaime Sevilla, Anson Ho, <b>Tamay Besiroglu</b><br>
-            <div class="btn-group-xs">
-              <a href="https://dl.acm.org/doi/10.1145/3563035"
-              class="btn btn-default">Viewpoint</a>
-            </div>
-          </p>
-				  <p>
+				 <p>
             <strong>Integrated assessment model for AI</strong> (work in progress)<br>
             <div class="btn-group-xs">
               <a href="https://takeoffspeeds.com/"
@@ -108,8 +108,11 @@
 		          <a href="https://github.com/epoch-research/ftm"
 	              class="btn btn-default">Code</a>
             </div>
-          </p>
-          <p>
+          </p>        
+</div>
+				<h4 class="dropdown-title">Machine Learning and Computing<i class="fas fa-angle-down"></i></h4>
+	    <div class="dropdown-content">
+					<p>
             <strong>Compute trends across three eras of machine learning</strong><br>
 	           Jaime Sevilla, Lennart Heim, Anson Ho, <b>Tamay Besiroglu</b>, Marius Hobbhahn, Pablo Villalobos<br>
             <div class="btn-group-xs">
@@ -121,7 +124,7 @@
               class="btn btn-default">Code</a>
             </div>
           </p>
-					 <p>
+					<p>
             <strong>Algorithmic progress in computer vision</strong><br>
 	           Ege Erdil, <b>Tamay Besiroglu</b><br>
             <div class="btn-group-xs">
@@ -130,8 +133,8 @@
 	          <a href="https://colab.research.google.com/drive/1-gBOhcVaYDNgO-9_EAOanfH7AeD17EGv?usp=sharing"
               class="btn btn-default">Code</a>
             </div>
-          </p>	
-					 <p>
+          </p>
+					<p>
             <strong>Will we run out of data? An analysis of the limits of scaling datasets in Machine Learning</strong><br>
 	           Pablo Villalobos, Jaime Sevilla, Lennart Heim, <b>Tamay Besiroglu</b>, Marius Hobbhahn, Anson Ho<br>
             <div class="btn-group-xs">
@@ -140,16 +143,8 @@
 	          <a href="https://github.com/epoch-research/data-stock"
               class="btn btn-default">Code</a>
             </div>
-          </p>				
-					 <p>
-            <strong>Inferring the effectiveness of government interventions against COVID-19</strong><br>
-	           Jan M Brauner, Sören Mindermann, Mrinank Sharma, David Johnston, John Salvatier, Tomáš Gavenčiak, Anna B Stephenson, Gavin Leech, George Altman, Vladimir Mikulik, Alexander John Norman, Joshua Teperowski Monrad, <b>Tamay Besiroglu</b>, et al.<br>
-            <div class="btn-group-xs">
-              <a href="https://www.science.org/doi/10.1126/science.abd9338"
-              class="btn btn-default">Paper</a>
-            </div>
           </p>
-					 <p>
+					<p>
             <strong>Parameter, Compute and Data Trends in Machine Learning</strong><br>
 	           Jaime Sevilla, Pablo Villalobos, Juan Felipe Cerón, Matthew Burtell, Lennart Heim, Amogh B. Nanjajjar, Anson Ho, <b>Tamay Besiroglu</b>, Marius Hobbhahn Jean-Stanislas Denain, and Owen Dudney<br>
             <div class="btn-group-xs">
@@ -159,14 +154,15 @@
               class="btn btn-default">Our World in Data</a>
             </div>
 	          </p>
-            <strong>Toward trustworthy AI development: mechanisms for supporting verifiable claims</strong><br>
+						<p>
+						<strong>Toward trustworthy AI development: mechanisms for supporting verifiable claims</strong><br>
 	           Miles Brundage, Shahar Avin, Jasmine Wang, Haydn Belfield, Gretchen Krueger, Gillian Hadfield, Heidy Khlaaf, Jingying Yang, Helen Toner, Ruth Fong, Tegan Maharaj, Pang Wei Koh, Sara Hooker, Jade Leung, Andrew Trask, Emma Bluemke, Jonathan Lebensold, Cullen O'Keefe, Mark Koren, Théo Ryffel, JB Rubinovitz, <b>Tamay Besiroglu</b>, et al.<br>
             <div class="btn-group-xs">
               <a href="http://www.towardtrustworthyai.com/"
               class="btn btn-default">Paper</a>
             </div>
 	          </p>
-					 <p>
+						<p>
             <strong>Are models getting harder to find?</strong><br>
 		         <b>Tamay Besiroglu</b><br>
             <div class="btn-group-xs">
@@ -174,7 +170,12 @@
               class="btn btn-default">MPhil Thesis</a>
             </div>
           </p>
-					 <p>
+				</div>
+				<h4 class="dropdown-title">Forecasting<i class="fas fa-angle-down"></i></h4>
+	    <div class="dropdown-content">
+		
+          <h4><a id="forecasting"></a>Forecasting</h4>
+          <p>
             <strong>Chimeric forecasting: combining probabilistic predictions from computational models and human judgment</strong><br>
 		         Thomas McAndrew, Allison Codi, Juan Cambeiro, <b>Tamay Besiroglu</b>, David Braun, Eva Chen, Luis Enrique Urtubey de Cesaris, Damon Luk<br>
             <div class="btn-group-xs">
@@ -182,7 +183,15 @@
               class="btn btn-default">Paper</a>
             </div>
 	          </p>
-					 <p>
+						<p>
+            <strong>Inferring the effectiveness of government interventions against COVID-19</strong><br>
+	           Jan M Brauner, Sören Mindermann, Mrinank Sharma, David Johnston, John Salvatier, Tomáš Gavenčiak, Anna B Stephenson, Gavin Leech, George Altman, Vladimir Mikulik, Alexander John Norman, Joshua Teperowski Monrad, <b>Tamay Besiroglu</b>, et al.<br>
+            <div class="btn-group-xs">
+              <a href="https://www.science.org/doi/10.1126/science.abd9338"
+              class="btn btn-default">Paper</a>
+            </div>
+          </p>
+						<p>
             <strong>Tools and aggregation techniques for epidemiological forecasting</strong><br>
 	           Thomas McAndrew, Juan Cambeiro, Allison Codi, <b>Tamay Besiroglu</b>, David Braun, Eva Chen, Luis Enrique Urtubey de Cesaris, et al.<br>
             <div class="btn-group-xs">
@@ -195,36 +204,25 @@
             </div>
           </p>
         </div>
-
-				 <div class="row">
-					<div id="media">
-            </div>
+			</div>
+        <div class="row">
           <h2><a id="media"></a>Media</h2>
-          <hr>
           <ul>
-					<li> I debated the possibility of explosive economic growth from AI with economist Matt Clancy in <a href="https://asteriskmag.com/issues/03/the-great-inflection-a-debate-about-ai-and-explosive-growth"> Asterisk magazine</a></li> 
+		  			<li> I debated the possibility of explosive economic growth from AI with economist Matt Clancy in <a href="https://asteriskmag.com/issues/03/the-great-inflection-a-debate-about-ai-and-explosive-growth"> Asterisk magazine</a></li> 
 					<li> My work on compute in Machine Learning was the first thing cited in <a href="https://blog.google/technology/ai/bard-google-ai-search-updates/"> Google's CEO Sundar Pichai's announcement of Bard</a></li> 
-					<li> A <a href="https://time.com/6300942/ai-progress-charts/">Time article</a> covered three of my papers on AI</li> 
 					<li> My work and datasets on the long-run history of AI feature in Our World In Data's <a href="https://ourworldindata.org/brief-history-of-ai/">The brief history of artificial intelligence</a></li> 
-					<li> An article I co-authored was on data-usage in AI was discussed in <a href="https://www.theatlantic.com/technology/archive/2023/01/artificial-intelligence-ai-chatgpt-dall-e-2-learning/672754/?utm_source=feed">The Atlantic</a>, <a href="https://www.newscientist.com/article/2353751-ai-chatbots-could-hit-a-ceiling-after-2026-as-training-data-runs-dry/">New Scientist</a>, and <a href="https://www.technologyreview.com/2022/11/24/1063684/we-could-run-out-of-data-to-train-ai-language-programs/">MIT Technology Review</a></li> 
+					<li> A <a href="https://time.com/6300942/ai-progress-charts/">Time article</a> on the pace of progress in AI covered three of my papers on AI</li> 
+		  			<li> An article I co-authored was on data-usage in AI was discussed in <a href="https://www.theatlantic.com/technology/archive/2023/01/artificial-intelligence-ai-chatgpt-dall-e-2-learning/672754/?utm_source=feed">The Atlantic</a>, <a href="https://www.newscientist.com/article/2353751-ai-chatbots-could-hit-a-ceiling-after-2026-as-training-data-runs-dry/">New Scientist</a>, and <a href="https://www.technologyreview.com/2022/11/24/1063684/we-could-run-out-of-data-to-train-ai-language-programs/">MIT Technology Review</a></li> 
 					<li> <a href="https://www.aei.org/articles/5-quick-questions-for-mit-research-scientist-tamay-besiroglu-on-the-huge-economic-potential-of-ai/">I was on 5 Quick Questions</a> with James Pethokoukis of the American Enterprise Institute</li> 
 					<li> <a href="https://www.economist.com/interactive/briefing/2022/06/11/huge-foundation-models-are-turbo-charging-ai-progress">The Economist’s June 2022 cover article on AI</a> featured our work on compute trends in machine learning, as did <a href="https://www.economist.com/business/2023/01/30/the-race-of-the-ai-labs-heats-up"> their coverage on Large Language Models</a></li> 
 					<li> The <a href="https://www.ft.com/content/20ba204d-752d-47fd-b911-06e93b5bc9fd">Financial Times</a> and <a href="https://venturebeat.com/ai/ai-researchers-propose-bias-bounties-to-put-ethics-principles-into-practice/">VentureBeat</a> covered our work on promoting trustworthy AI development</li> 
 					<li> The University of Cambridge's economics faculty <a href="https://covid.econ.cam.ac.uk/besiroglu-inferring-the-effectiveness-of-government-interventions-against-covid-19">wrote about me and my work</a> on my COVID-19-related work</li> 
 					</ul>
+        </div>
       </div>
-
     </div>
-
-    <hr>
-
-    <footer>
-    &nbsp; 
-    </footer>
-
   </div>
-
-  <!-- JavaScript -->
+<!-- JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script type="text/x-mathjax-config">
@@ -239,9 +237,30 @@
      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
   <script type="text/javascript" src="/js/main.js"></script>
-
 <footer class="fixed-bottom">
     <p>Thanks <a href="https://github.com/dustinvtran/www">Dustin!</a></p>
   </footer>
+
+<script>
+  $(document).ready(function() {
+    $(".fas").click(function() {
+      $(this).closest('h4').next('.content').toggleClass('open');
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const dropdownTitles = document.querySelectorAll(".dropdown-title");
+    dropdownTitles.forEach(title => {
+      title.addEventListener("click", function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('.fas');
+        content.classList.toggle("open");
+        icon.classList.toggle("fa-angle-down");
+        icon.classList.toggle("fa-angle-up");
+      });
+    });
+  });
+</script>
 </body>
 </html>
