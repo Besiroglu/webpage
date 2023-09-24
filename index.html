@@ -23,9 +23,18 @@
 	  /* ...existing styles... */
 	  margin-bottom: 20px; /* Adds space below each section */
 	}
-	
 	.open {
 	  /* Logic to make it expanded, possibly 'display: block;' */
+	}
+	#sidebar {
+	  order: -1;
+	}
+	
+	.sidebar-content {
+	  max-width: 25%; 
+	}
+	#main-content {
+	  min-width: 75%;
 	}
   </style>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,11 +46,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" id="sidebar">
 
-    <div class="row" style="padding:20px">
-
-		<div class="hidden-xs col-sm-3 col-md-2" id="sidebar" role="navigation" style="margin-top:190px">
+      <div class="sidebar-content">
         <hr>
         <ul class="nav nav-pills nav-stacked">
           <li><a href="#research">Research</a></li>
@@ -215,7 +224,8 @@
 					<li> The University of Cambridge's economics faculty <a href="https://covid.econ.cam.ac.uk/besiroglu-inferring-the-effectiveness-of-government-interventions-against-covid-19">wrote about me and my work</a> on my COVID-19-related work</li> 
 					</ul>
         </div>
-      </div>
+				</div> <!-- Closing the sidebar div -->
+	    <div class="col-xs-12 col-sm-9 col-md-9"> <!-- Starting the main content div -->
     </div>
   </div>
 <!-- JavaScript -->
