@@ -261,6 +261,11 @@
       });
     });
   });
+$(document).ready(function(){
+  $(".dropdown-title").click(function(){
+    $(this).next(".dropdown-content").slideToggle("fast");
+  });
+});
 </script>
 </body>
 </html>
