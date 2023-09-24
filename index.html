@@ -13,12 +13,18 @@
   <link rel="stylesheet" href="/css/main.css">
 	<script src="https://kit.fontawesome.com/388bd0613c.js" crossorigin="anonymous"></script>
 	<style>
-	.bottom-footer {
-	  position: absolute;
-	  bottom: 0;
-	  width: 100%;
-	  text-align: center;
-	}
+    .bottom-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .dropdown-content {
+      display: none; 
+    }
+    .open {
+      display: block;
+    }
   </style>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -26,13 +32,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-.dropdown-content {
-  display: none; 
-}
-
-.open {
-  display: block;
-}
 </head>
 <body>
   <div class="container">
@@ -68,8 +67,10 @@
         <hr>
 
         <div class="row">
-          <p>						
-				I'm the Associate Director of <a href="https://epochai.org/">Epoch</a>, and research affiliate at <a href="https://www.csail.mit.edu/">MIT CSAIL</a>. I work on the intersection of economics and computing, focusing on the technical and economic basis for AI automation.        </div>
+          <p>
+					I am an interdisciplinary AI researcher studying the progress, impacts, and responsible development of artificial intelligence. My research combines perspectives from computer science, economics, public policy, and forecasting to analyze AI trends and their implications for society. 
+						
+					I'm a member of technical staff at <a href="https://www.csail.mit.edu/">MIT CSAIL</a>. I'm also the Associate Director of <a href="https://epochai.org/">Epoch</a>. I hold an MPhil in Economics from the University of Cambridge, where I received the Stevenson Prize for top academic performance..
         </div>
 
           <h2><a id="research"></a>Research</h2>
@@ -240,18 +241,14 @@
 
 <script>
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('click', (e) => {
 
-  document.addEventListener('click', (e) => {
+  const h4 = e.target.closest('h4');
 
-    const h4 = e.target.closest('h4');
-
-    if(h4) {
-      const content = h4.querySelector('.content');
-      content.classList.toggle('open');
-    }
-
-  })
+  if(h4) {
+    const content = h4.querySelector('.content');
+    content.classList.toggle('open');
+  }
 
 })
 
