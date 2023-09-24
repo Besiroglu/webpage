@@ -244,16 +244,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const research = document.querySelector('#research');
+  document.addEventListener('click', (e) => {
 
-  research.addEventListener('click', (e) => {
-    if(e.target.tagName === 'I') {
-      const content = e.target.parentNode.nextElementSibling;
-      content.classList.toggle('open'); 
+    const h4 = e.target.closest('h4');
+
+    if(h4) {
+      const content = h4.querySelector('.content');
+      content.classList.toggle('open');
     }
+
   })
 
-});
+})
 
 </script>
 </body>
