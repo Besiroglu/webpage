@@ -45,6 +45,9 @@ a {
 .btn-primary:last-child {
   margin-right: 0;
 }
+.sticky-nav__container {
+  width: 214px;
+}
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
@@ -95,6 +98,7 @@ footer p {
 }
 .site-header img {
   margin-right: 24px !important;
+  border-radius: 50%;
 }
 .site-header p {
   margin-bottom: 8px;
