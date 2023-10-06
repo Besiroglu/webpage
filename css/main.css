@@ -187,8 +187,8 @@ hr {
   border-top: 2px dashed #35356b;
 }
 .card__image {
+  width: 200px;
   height: 200px;
-  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,6 +196,7 @@ hr {
 
 .card__image img {
   width: 200px;
+  height: 200px;
 }
 
 @media (min-width: 922px) {
@@ -271,7 +272,7 @@ hr {
     position: fixed;
     top: -100px;
     transition: top 225ms;
-    right: 20px;
+    right: 10px;
   }
 
   .sticky-nav .toTop__btn.show {
