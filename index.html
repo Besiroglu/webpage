@@ -14,15 +14,15 @@
     <link href="./css/font-face.css"
           rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="./css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="https://kit.fontawesome.com/388bd0613c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/388bd0613c.js" defer crossorigin="anonymous"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -224,7 +224,7 @@
 
                     <div class="card">
                         <div class="card__image">
-                            <img src="./img/paper-1.webp"
+                            <img src="./img/paper-6.webp"
                                  alt="Illustration for Algorithmic progress in computer vision">
                         </div>
                         <div class="card-body">
@@ -493,45 +493,10 @@
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 -->
-<script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/main.js" defer></script>
 
 <script>
-  const toggleTheme = () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme")
-    if (currentTheme === "dark") {
-      document.documentElement.setAttribute("data-theme", "light")
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark")
-    }
-  }
 
-  $(document).ready(function () {
-    $(".themeToggle").on("click", toggleTheme)
-
-    // Cache the button element for better performance
-    const btn = document.querySelector('.toTop__btn');
-
-    window.onscroll = function () {
-      // Check how far we've scrolled
-      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-      if (scrollPosition > 600) {
-        btn.classList.add('show');
-      } else {
-        btn.classList.remove('show');
-      }
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const htmlTag = document.documentElement;
-    const themeToggleButton = document.getElementById("theme-toggle-button");
-
-    // Check for user's preference and set initial theme
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      htmlTag.setAttribute('data-theme', 'dark');
-    }
-  });
 
 
 </script>

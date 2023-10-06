@@ -28,3 +28,40 @@ init_mathjax = function() {
 init_mathjax();
 
  */
+
+const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme")
+    if (currentTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "light")
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark")
+    }
+}
+
+$(document).ready(function () {
+    $(".themeToggle").on("click", toggleTheme)
+
+    // Cache the button element for better performance
+    const btn = document.querySelector('.toTop__btn');
+
+    window.onscroll = function () {
+        // Check how far we've scrolled
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollPosition > 600) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const htmlTag = document.documentElement;
+    const themeToggleButton = document.getElementById("theme-toggle-button");
+
+    // Check for user's preference and set initial theme
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        htmlTag.setAttribute('data-theme', 'dark');
+    }
+});
