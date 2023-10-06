@@ -283,6 +283,9 @@ hr {
   section {
     margin-top: 28px;
   }
+  .site-header {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1235px) {
