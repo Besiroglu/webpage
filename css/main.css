@@ -212,7 +212,7 @@ hr {
 
 @media (max-width: 1234px) {
   .sticky-nav__container {
-    padding: 0 0 0 0;
+    padding: 0 0 0 0 !important;
   }
   .sticky-nav {
     display: flex;
@@ -269,6 +269,19 @@ hr {
     padding: 12px 0;
     border-bottom: 2px dashed #cbdcf3;
     margin-bottom: 0;
+  }
+  .site-header img {
+    margin-right: 0 !important;
+  }
+  .btn-group-xs {
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-group-xs a:last-child {
+    margin-right: 0 !important;
+  }
+  section {
+    margin-top: 28px;
   }
 }
 

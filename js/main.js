@@ -38,9 +38,8 @@ const toggleTheme = () => {
     }
 }
 
-$(document).ready(function () {
-    $(".themeToggle").on("click", toggleTheme)
-
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".themeToggle").addEventListener("click", toggleTheme);
     // Cache the button element for better performance
     const btn = document.querySelector('.toTop__btn');
 
