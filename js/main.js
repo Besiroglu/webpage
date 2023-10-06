@@ -7,6 +7,7 @@ ga('create', 'UA-53150914-2', 'auto');
 ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
 
+/*
 // MathJax
 init_mathjax = function() {
   if (window.MathJax) {
@@ -26,13 +27,40 @@ init_mathjax = function() {
 }
 init_mathjax();
 
-// Show more/less text
-$('.show-more').click(function(){
-  var $this = $(this);
-  $this.toggleClass('show-more');
-  if($this.hasClass('show-more')){
-    $this.text('show more');
-  } else {
-    $this.text('show less');
-  }
+ */
+
+const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme")
+    if (currentTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "light")
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark")
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".themeToggle").addEventListener("click", toggleTheme);
+    // Cache the button element for better performance
+    const btn = document.querySelector('.toTop__btn');
+
+    window.onscroll = function () {
+        // Check how far we've scrolled
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollPosition > 600) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const htmlTag = document.documentElement;
+    const themeToggleButton = document.getElementById("theme-toggle-button");
+
+    // Check for user's preference and set initial theme
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        htmlTag.setAttribute('data-theme', 'dark');
+    }
 });

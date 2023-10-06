@@ -1,255 +1,502 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Research website of Tamay Besiroglu.">
     <meta name="author" content="Tamay Besiroglu">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Tamay Besiroglu</title>
-
     <!-- CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link href="https://kit.fontawesome.com/388bd0613c.js" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="https://kit.fontawesome.com/388bd0613c.js" crossorigin="anonymous"></script>
-    <style>
-        .bottom-footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="./css/font-face.css"
+          rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://kit.fontawesome.com/388bd0613c.js" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
 
-        .dropdown-content {
-            /* ...existing styles... */
-            margin-bottom: 20px;
-            /* Adds space below each section */
-        }
-
-        .open {
-            /* Logic to make it expanded, possibly 'display: block;' */
-        }
-
-        #sidebar {
-            order: -1;
-        }
-
-        .sidebar-content {
-            max-width: 25%;
-        }
-
-        #main-content {
-            min-width: 75%;
-        }
-    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-		<script src="https://kit.fontawesome.com/388bd0613c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/388bd0613c.js" crossorigin="anonymous"></script>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3" id="sidebar">
+<div class="container">
+    <div class="site-header">
+        <img src="./img/tamay-profile-image.webp" width="160" height="160"
+             alt="Tamay Besiroglu's Profile picture" class="pull-left">
+        <div>
+            <h1>Tamay Besiroglu</h1>
+            <div class="lead">
+                <p>tamay.besiroglu@gmail.com</p>
+                <div class="btn-group-xs">
+                    <a href="https://twitter.com/tamaybes"
+                       target="_blank"
+                       aria-label="Open Tamay Besiroglu's twitter"
+                       class="icon">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    </a>
 
-                <div class="sidebar-content">
-                    <hr>
-                    <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#research">Research</a></li>
-                        <li><a href="#media">Media</a></li>
-                    </ul>
+                    <a href="https://scholar.google.com/citations?user=dC9uCHcAAAAJ&hl=en&oi=ao"
+                       target="_blank"
+                       aria-label="Open Tamay Besiroglu's something"
+                       class="icon">
+                        <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/tamay-besiroglu"
+                       target="_blank"
+                       aria-label="Link to linkedin page"
+                       class="icon">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+
                 </div>
             </div>
-            <!-- Closing sidebar div -->
-            <div class="col-xs-12 col-sm-9 col-md-9">
-                <div class="row">
-                    <img src="img/ProfilePictureMaker.png" alt="Profile picture" class="pull-left" style="margin:10px
-          10px 10px 0; height:160px; width:160px; border-radius:100%">
-                    <h1>Tamay Besiroglu</h1>
-                    <p class="lead">
-                        <small>  </small><br>
-                        <xx-small> tamay.besiroglu at gmail.com </xx-small>
-                        <br>
-                        <a href="https://twitter.com/tamaybes" class="icon">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-                        <a href="https://scholar.google.com/citations?user=dC9uCHcAAAAJ&hl=en&oi=ao" class="icon">
-              <i class="fa fa-graduation-cap fa-lg"></i>
-            </a>
-                    </p>
-                </div>
-
-                <hr>
-
-                <div class="row">
-                    <p>
-                        I'm the Associate Director of <a href="https://epochai.org/">Epoch</a>, and research affiliate at <a href="https://www.csail.mit.edu/">MIT CSAIL</a>. I work on the intersection of economics and computing, focusing on the technical and economic basis for AI automation.
-                    </p>
-                </div>
-                <h2><a id="research"></a>Research</h2>
-                <hr>
-
-                <h4 class="dropdown-title">AI and Economic Impacts <i class="fas fa-angle-down"></i></h4>
-                <div class="dropdown-content">
-
-                    <p>
-                        <strong>Explosive growth from AI automation: A review of the arguments</strong><br> Ege Erdil, <b>Tamay Besiroglu</b><br>
-                        <div class="btn-group-xs">
-                            <a href="https://arxiv.org/abs/2309.11690" class="btn btn-default">Paper</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Economic impacts of AI-augmented R&D</strong><br>
-                        <b>Tamay Besiroglu</b>, Nicholas Emery-Xu, Neil Thompson<br>
-                        <div class="btn-group-xs">
-                            <a href="https://arxiv.org/abs/2212.08198" class="btn btn-default">Paper</a>
-                            <a href="https://github.com/Besiroglu/webpage/blob/master/Presentations/Presentation_Economic_impacts_of_AI_augmented_R_D__Copy.pdf" class="btn btn-default">Slides</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Integrated assessment model for AI</strong> (work in progress)<br>
-                        <div class="btn-group-xs">
-                            <a href="https://takeoffspeeds.com/" class="btn btn-default">Playground</a>
-                            <a href="https://github.com/epoch-research/ftm" class="btn btn-default">Code</a>
-                        </div>
-                    </p>
-                </div>
-                <h4 class="dropdown-title">Machine Learning and Computing<i class="fas fa-angle-down"></i></h4>
-                <div class="dropdown-content">
-                    <p>
-                        <strong>Compute trends across three eras of machine learning</strong><br> Jaime Sevilla, Lennart Heim, Anson Ho, <b>Tamay Besiroglu</b>, Marius Hobbhahn, Pablo Villalobos<br>
-                        <div class="btn-group-xs">
-                            <a href="https://arxiv.org/abs/2202.05924" class="btn btn-default">Paper</a>
-                            <a href="https://epochai.org/blog/compute-trends" class="btn btn-default">Blog</a>
-                            <a href="https://github.com/epoch-research/Compute-Trends" class="btn btn-default">Code</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Algorithmic progress in computer vision</strong><br> Ege Erdil, <b>Tamay Besiroglu</b><br>
-                        <div class="btn-group-xs">
-                            <a href="https://arxiv.org/abs/2212.05153" class="btn btn-default">Paper</a>
-                            <a href="https://colab.research.google.com/drive/1-gBOhcVaYDNgO-9_EAOanfH7AeD17EGv?usp=sharing" class="btn btn-default">Code</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Will we run out of data? An analysis of the limits of scaling datasets in Machine Learning</strong><br> Pablo Villalobos, Jaime Sevilla, Lennart Heim, <b>Tamay Besiroglu</b>, Marius Hobbhahn, Anson Ho<br>
-                        <div class="btn-group-xs">
-                            <a href="https://arxiv.org/abs/2211.04325" class="btn btn-default">Paper</a>
-                            <a href="https://github.com/epoch-research/data-stock" class="btn btn-default">Code</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Parameter, Compute and Data Trends in Machine Learning</strong><br> Jaime Sevilla, Pablo Villalobos, Juan Felipe Cerón, Matthew Burtell, Lennart Heim, Amogh B. Nanjajjar, Anson Ho, <b>Tamay Besiroglu</b>, Marius Hobbhahn Jean-Stanislas Denain, and Owen Dudney<br>
-                        <div class="btn-group-xs">
-                            <a href="https://docs.google.com/spreadsheets/d/1AAIebjNsnJj_uKALHbXNfn3_YsT6sHXtCU0q7OIPuc4/edit#gid=0" class="btn btn-default">Dataset</a>
-                            <a href="https://ourworldindata.org/grapher/ai-training-computation" class="btn btn-default">Our World in Data</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Toward trustworthy AI development: mechanisms for supporting verifiable claims</strong><br> Miles Brundage, Shahar Avin, Jasmine Wang, Haydn Belfield, Gretchen Krueger, Gillian Hadfield, Heidy Khlaaf, Jingying Yang, Helen Toner, Ruth Fong, Tegan Maharaj, Pang Wei Koh, Sara Hooker, Jade Leung, Andrew Trask, Emma Bluemke, Jonathan Lebensold, Cullen O'Keefe, Mark Koren, Théo Ryffel, JB Rubinovitz, <b>Tamay Besiroglu</b>, et al.<br>
-                        <div class="btn-group-xs">
-                            <a href="http://www.towardtrustworthyai.com/" class="btn btn-default">Paper</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Are models getting harder to find?</strong><br>
-                        <b>Tamay Besiroglu</b><br>
-                        <div class="btn-group-xs">
-                            <a href="https://github.com/Besiroglu/webpage/blob/3682ccac6fc92378934c24b0c08a64bcca1793e6/papers/AreModels.pdf" class="btn btn-default">MPhil Thesis</a>
-                        </div>
-                    </p>
-                </div>
-                <h4 class="dropdown-title">Forecasting<i class="fas fa-angle-down"></i></h4>
-                <div class="dropdown-content">
-                    <p>
-                        <strong>Chimeric forecasting: combining probabilistic predictions from computational models and human judgment</strong><br> Thomas McAndrew, Allison Codi, Juan Cambeiro, <b>Tamay Besiroglu</b>, David Braun, Eva Chen, Luis Enrique Urtubey de Cesaris, Damon Luk<br>
-                        <div class="btn-group-xs">
-                            <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-022-07794-5" class="btn btn-default">Paper</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Inferring the effectiveness of government interventions against COVID-19</strong><br> Jan M Brauner, Sören Mindermann, Mrinank Sharma, David Johnston, John Salvatier, Tomáš Gavenčiak, Anna B Stephenson, Gavin Leech, George Altman, Vladimir Mikulik, Alexander John Norman, Joshua Teperowski Monrad, <b>Tamay Besiroglu</b>, et al.<br>
-                        <div class="btn-group-xs">
-                            <a href="https://www.science.org/doi/10.1126/science.abd9338" class="btn btn-default">Paper</a>
-                        </div>
-                    </p>
-                    <p>
-                        <strong>Tools and aggregation techniques for epidemiological forecasting</strong><br> Thomas McAndrew, Juan Cambeiro, Allison Codi, <b>Tamay Besiroglu</b>, David Braun, Eva Chen, Luis Enrique Urtubey de Cesaris, et al.<br>
-                        <div class="btn-group-xs">
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0264410X22002006" class="btn btn-default">Paper 1</a>
-                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9016644/" class="btn btn-default">Paper 2</a>
-                            <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00127-3/fulltext" class="btn btn-default">Paper 3</a>
-                        </div>
-                    </p>
-                </div>
-		            <div class="row">
-                <h2><a id="media"></a>Media</h2>
-                <ul>
-                    <li> I debated the possibility of explosive economic growth from AI with economist Matt Clancy in <a href="https://asteriskmag.com/issues/03/the-great-inflection-a-debate-about-ai-and-explosive-growth"> Asterisk magazine</a></li>
-                    <li> My work on compute in Machine Learning was the first thing cited in <a href="https://blog.google/technology/ai/bard-google-ai-search-updates/"> Google's CEO Sundar Pichai's announcement of Bard</a></li>
-                    <li> My work and datasets on the long-run history of AI feature in Our World In Data's <a href="https://ourworldindata.org/brief-history-of-ai/">The brief history of artificial intelligence</a></li>
-                    <li> A <a href="https://time.com/6300942/ai-progress-charts/">Time article</a> on the pace of progress in AI covered three of my papers on AI</li>
-                    <li> An article I co-authored was on data-usage in AI was discussed in <a href="https://www.theatlantic.com/technology/archive/2023/01/artificial-intelligence-ai-chatgpt-dall-e-2-learning/672754/?utm_source=feed">The Atlantic</a>, <a href="https://www.newscientist.com/article/2353751-ai-chatbots-could-hit-a-ceiling-after-2026-as-training-data-runs-dry/">New Scientist</a>, and <a href="https://www.technologyreview.com/2022/11/24/1063684/we-could-run-out-of-data-to-train-ai-language-programs/">MIT Technology Review</a></li>
-                    <li> <a href="https://www.aei.org/articles/5-quick-questions-for-mit-research-scientist-tamay-besiroglu-on-the-huge-economic-potential-of-ai/">I was on 5 Quick Questions</a> with James Pethokoukis of the American Enterprise Institute</li>
-                    <li> <a href="https://www.economist.com/interactive/briefing/2022/06/11/huge-foundation-models-are-turbo-charging-ai-progress">The Economist’s June 2022 cover article on AI</a> featured our work on compute trends in machine learning, as did <a href="https://www.economist.com/business/2023/01/30/the-race-of-the-ai-labs-heats-up"> their coverage on Large Language Models</a></li>
-                    <li> The <a href="https://www.ft.com/content/20ba204d-752d-47fd-b911-06e93b5bc9fd">Financial Times</a> and <a href="https://venturebeat.com/ai/ai-researchers-propose-bias-bounties-to-put-ethics-principles-into-practice/">VentureBeat</a> covered our work on promoting trustworthy AI development</li>
-                    <li> The University of Cambridge's economics faculty <a href="https://covid.econ.cam.ac.uk/besiroglu-inferring-the-effectiveness-of-government-interventions-against-covid-19">wrote about me and my work</a> on my COVID-19-related work</li>
-                </ul>
-            </div>
-            </div>
-
-        </div>
-        <!-- Closing the sidebar div -->
-        <div class="col-xs-12 col-sm-9 col-md-9">
-            <!-- Starting the main content div -->
         </div>
     </div>
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'] ], processEscapes: true } });
-    </script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    <script type="text/javascript" src="/js/main.js"></script>
-    <footer class="fixed-bottom">
-        <p>Thanks <a href="https://github.com/dustinvtran/www">Dustin!</a></p>
-    </footer>
+    <div class="row">
+        <div class="flex-shrink-0 p-3 sticky-nav__container">
+            <ul class="list-unstyled ps-0 sticky-nav">
+                <li class="mb-1">
+                    <a href="#research"
+                       aria-label="Scroll to research section"
+                       class="btn btn-toggle align-items-center rounded collapsed">
+                        Research
+                    </a>
+                </li>
+                <li>
+                    <hr>
+                </li>
+                <li class="mb-1">
+                    <a href="#media"
+                       aria-label="Scroll to media section"
+                       class="btn btn-toggle align-items-center rounded collapsed">
+                        Media
+                    </a>
+                </li>
+                <li class="mb-1 toTop__btn">
+                    <a href="#"
+                       aria-label="Scroll to top of page"
+                       class="btn btn-toggle align-items-center rounded collapsed">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-9 main__content">
+            <div class="row">
+                <p>I'm the Associate Director of <a href="https://epochai.org/" target="_blank" aria-label="Follow link to epoch ai website">Epoch</a>, and research
+                    affiliate at <a href="https://www.csail.mit.edu/" target="_blank" aria-label="Follow link to MIT CSAIL website">MIT CSAIL</a>. I work on the
+                    intersection of
+                    economics and computing, focusing on the technical and economic basis for AI automation.
+                </p>
+            </div>
+            <section id="research">
+                <h2>Research</h2>
+                <p>My primary research focus delves deep into the synergy of the technical and economic frameworks
+                    underpinning AI automation. My insights bridge the divide between two vital domains, shaping the
+                    future of AI-driven economic models. Reach out to me to explore collaborative opportunities.</p>
+                <div class="research__area">
+                    <h3>AI and Economic Impacts</h3>
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-1.webp"
+                                 width="200"
+                                 height="200"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Explosive growth from AI automation: A review of the arguments</h4>
+                            <p class="card-text">Ege Erdil, <b>Tamay Besiroglu</b></p>
+                            <div class="btn-group-xs">
+                                <a href="https://arxiv.org/abs/2309.11690"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper"
+                                   class="btn btn-primary">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-2.webp"
+                                 width="200"
+                                 height="200"
+                                 alt="Partial Screenshot from Economic impacts of AI-augmented R&D">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Economic impacts of AI-augmented R&D</h4>
+                            <p class="card-text"><b>Tamay Besiroglu</b>, Nicholas Emery-Xu, Neil Thompson</p>
+                            <div class="btn-group-xs">
+                                <a href="https://arxiv.org/abs/2212.08198"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper"
+                                   class="btn btn-primary">Paper</a>
+                                <a href="https://github.com/Besiroglu/webpage/blob/master/Presentations/Presentation_Economic_impacts_of_AI_augmented_R_D__Copy.pdf"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Slides"
+                                   class="btn btn-primary">Slides</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-3.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Integrated assessment model for AI</h4>
+                            <p class="card-text">(work in progress)</p>
+                            <div class="btn-group-xs">
+                                <a href="https://takeoffspeeds.com/"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Playground"
+                                   class="btn btn-primary">Playground</a>
+                                <a href="https://github.com/epoch-research/ftm"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Code"
+                                   class="btn btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="research_area">
+                    <h3>Machine Learning and Computing</h3>
 
-    <script>
-        $(document).ready(function() {
-            $(".fas").click(function() {
-                $(this).closest('h4').next('.content').toggleClass('open');
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const dropdownTitles = document.querySelectorAll(".dropdown-title");
-            dropdownTitles.forEach(title => {
-                title.addEventListener("click", function() {
-                    const content = this.nextElementSibling;
-                    const icon = this.querySelector('.fas');
-                    content.classList.toggle("open");
-                    icon.classList.toggle("fa-angle-down");
-                    icon.classList.toggle("fa-angle-up");
-                });
-            });
-        });
-        $(document).ready(function() {
-            $(".dropdown-title").click(function() {
-                $(this).next(".dropdown-content").slideToggle("fast");
-            });
-        });
-    </script>
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-4.webp"
+                                 alt="Screenshot of Compute trends across three eras of machine learning">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Compute trends across three eras of machine learning</h4>
+                            <p class="card-text">Jaime Sevilla, Lennart Heim, Anson Ho, <b>Tamay Besiroglu</b>,
+                                Marius Hobbhahn, Pablo Villalobos</p>
+                            <div class="btn-group-xs">
+                                <a href="https://arxiv.org/abs/2202.05924" target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper"
+                                   class="btn btn-primary">Paper</a>
+                                <a href="https://epochai.org/blog/compute-trends" target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Blog"
+                                   class="btn btn-primary">Blog</a>
+                                <a href="https://github.com/epoch-research/Compute-Trends"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Code"
+                                   class="btn btn-primary">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-5.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Algorithmic progress in computer vision</h4>
+                            <p class="card-text">Ege Erdil, <b>Tamay Besiroglu</b></p>
+                            <div class="btn-group-xs">
+                                <a href="https://arxiv.org/abs/2212.05153"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper">Paper</a>
+                                <a href="https://colab.research.google.com/drive/1-gBOhcVaYDNgO-9_EAOanfH7AeD17EGv?usp=sharing"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Code">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-6.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Will we run out of data? An analysis of the limits of scaling
+                                datasets in Machine Learning</h4>
+                            <p class="card-text">Pablo Villalobos, Jaime Sevilla, Lennart Heim, <b>Tamay Besiroglu</b>,
+                                Marius Hobbhahn, Anson Ho</p>
+                            <div class="btn-group-xs">
+                                <a href="https://arxiv.org/abs/2211.04325"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper">Paper</a>
+                                <a href="https://github.com/epoch-research/data-stock"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Code">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-7.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Parameter, Compute and Data Trends in Machine Learning</h4>
+                            <p class="card-text">Jaime Sevilla, Pablo Villalobos, Juan Felipe Cerón, Matthew Burtell,
+                                Lennart Heim, Amogh B. Nanjajjar, Anson Ho, <b>Tamay Besiroglu</b>, Marius Hobbhahn,
+                                Jean-Stanislas Denain, and Owen Dudney</p>
+                            <div class="btn-group-xs">
+                                <a href="https://docs.google.com/spreadsheets/d/1AAIebjNsnJj_uKALHbXNfn3_YsT6sHXtCU0q7OIPuc4/edit#gid=0"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Dataset">Dataset</a>
+                                <a href="https://ourworldindata.org/grapher/ai-training-computation"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Our World in Data">Our World in Data</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-8.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Toward trustworthy AI development: mechanisms for supporting
+                                verifiable claims</h4>
+                            <p class="card-text">Miles Brundage, Shahar Avin, Jasmine Wang, Haydn Belfield, Gretchen
+                                Krueger, Gillian
+                                Hadfield, Heidy Khlaaf, Jingying Yang, Helen Toner, Ruth Fong, Tegan Maharaj, Pang Wei
+                                Koh, Sara Hooker, Jade Leung,
+                                Andrew Trask, Emma Bluemke, Jonathan Lebensold, Cullen O'Keefe, Mark Koren, Théo Ryffel,
+                                JB Rubinovitz, <b>Tamay Besiroglu</b>, et al.</p>
+                            <div class="btn-group-xs">
+                                <a href="https://www.towardtrustworthyai.com/"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-1.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Are models getting harder to find?</h4>
+                            <p class="card-text"><b>Tamay Besiroglu</b></p>
+                            <div class="btn-group-xs">
+                                <a href="https://github.com/Besiroglu/webpage/blob/3682ccac6fc92378934c24b0c08a64bcca1793e6/papers/AreModels.pdf"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="MPhil Thesis">MPhil Thesis</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="dropdown-title">Forecasting</h3>
+                <div>
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-1.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Chimeric forecasting: combining probabilistic predictions from
+                                computational models and human judgment</h4>
+                            <p class="card-text">Thomas McAndrew, Allison Codi, Juan Cambeiro, <b>Tamay Besiroglu</b>,
+                                David Braun, Eva Chen, Luis Enrique Urtubey de Cesaris, Damon Luk</p>
+                            <div class="btn-group-xs">
+                                <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-022-07794-5"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-1.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Inferring the effectiveness of government interventions against
+                                COVID-19</h4>
+                            <p class="card-text">Jan M Brauner, Sören Mindermann, Mrinank Sharma, David Johnston, John
+                                Salvatier, Tomáš Gavenčiak,
+                                Anna B Stephenson, Gavin Leech, George Altman, Vladimir Mikulik, Alexander John Norman,
+                                Joshua
+                                Teperowski Monrad, <b>Tamay Besiroglu</b>, et al.</p>
+                            <div class="btn-group-xs">
+                                <a href="https://www.science.org/doi/10.1126/science.abd9338"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="./img/paper-1.webp"
+                                 alt="Illustration for Algorithmic progress in computer vision">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Tools and aggregation techniques for epidemiological forecasting</h4>
+                            <p class="card-text">Thomas McAndrew, Juan Cambeiro, Allison Codi, <b>Tamay Besiroglu</b>,
+                                David Braun, Eva Chen, Luis Enrique Urtubey de Cesaris, et al.</p>
+                            <div class="btn-group-xs">
+                                <a href="https://www.sciencedirect.com/science/article/pii/S0264410X22002006"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper 1">Paper 1</a>
+                                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9016644/"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper 2">Paper 2</a>
+                                <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00127-3/fulltext"
+                                   class="btn btn-primary"
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   aria-label="Paper 3">Paper 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="media">
+                <h2>Media</h2>
+                <ul>
+                    <li> I debated the possibility of explosive economic growth from AI with economist Matt Clancy in
+                        <a href="https://asteriskmag.com/issues/03/the-great-inflection-a-debate-about-ai-and-explosive-growth"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="Asterisk magazine">
+                            Asterisk magazine</a></li>
+                    <li> My work on compute in Machine Learning was the first thing cited in
+                        <a href="https://blog.google/technology/ai/bard-google-ai-search-updates/"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="Google's CEO Sundar Pichai's announcement of Bard"> Google's CEO Sundar Pichai's announcement of Bard</a>
+                    </li>
+                    <li> My work and datasets on the long-run history of AI feature in Our World In Data's
+                        <a href="https://ourworldindata.org/brief-history-of-ai/"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="The brief history of artificial intelligence">
+                            The brief history of artificial intelligence
+                        </a></li>
+                    <li> A <a href="https://time.com/6300942/ai-progress-charts/"
+                              target="_blank"
+                              rel="noreferrer"
+                              aria-label="Time article">Time article</a> on the pace of progress in AI covered three of my papers on AI
+                    </li>
+                    <li> An article I co-authored was on data-usage in AI was discussed in
+                        <a href="https://www.theatlantic.com/technology/archive/2023/01/artificial-intelligence-ai-chatgpt-dall-e-2-learning/672754/?utm_source=feed"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="The Atlantic">The Atlantic</a>,
+                        <a href="https://www.newscientist.com/article/2353751-ai-chatbots-could-hit-a-ceiling-after-2026-as-training-data-runs-dry/"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="New Scientist">New Scientist</a>, and
+                        <a href="https://www.technologyreview.com/2022/11/24/1063684/we-could-run-out-of-data-to-train-ai-language-programs/"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="MIT Technology Review">MIT Technology Review</a></li>
+                    <li>
+                        <a href="https://www.aei.org/articles/5-quick-questions-for-mit-research-scientist-tamay-besiroglu-on-the-huge-economic-potential-of-ai/"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="I was on 5 Quick Questions">I was on 5 Quick Questions</a> with James Pethokoukis of
+                        the American Enterprise Institute
+                    </li>
+                    <li>
+                        <a href="https://www.economist.com/interactive/briefing/2022/06/11/huge-foundation-models-are-turbo-charging-ai-progress"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="The Economist’s June 2022 cover article on AI">The Economist’s June 2022 cover article on AI</a>
+                        featured our work on compute trends in machine
+                        learning, as did
+                        <a href="https://www.economist.com/business/2023/01/30/the-race-of-the-ai-labs-heats-up"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="their coverage on Large Language Models">their coverage on Large Language Models</a>
+                    </li>
+                    <li> The <a href="https://www.ft.com/content/20ba204d-752d-47fd-b911-06e93b5bc9fd"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Financial Times">Financial Times</a> and
+                        <a href="https://venturebeat.com/ai/ai-researchers-propose-bias-bounties-to-put-ethics-principles-into-practice/"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="VentureBeat">VentureBeat</a> covered our work on promoting trustworthy
+                        AI development
+                    </li>
+                    <li> The University of Cambridge's economics faculty
+                        <a href="https://covid.econ.cam.ac.uk/besiroglu-inferring-the-effectiveness-of-government-interventions-against-covid-19"
+                           target="_blank"
+                           rel="noreferrer"
+                           aria-label="wrote about me and my work">wrote about me and my work</a> on my COVID-19-related work
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+
+<footer class="fixed-bottom container-fluid">
+    <p>Thanks <a href="https://github.com/dustinvtran/www"
+                 target="_blank"
+                 rel="noreferrer"
+                 aria-label="Dustin">Dustin!</a></p>
+    <button class="themeToggle btn btn-toggle align-items-center rounded collapsed"
+            aria-label="Switch dark/light theme">
+        <i class="fa-solid fa-lightbulb"></i>
+    </button>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="./js/vendor/bootstrap.bundle.min.js"></script>
+
+<!-- clearing a warning
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'] ], processEscapes: true } });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script type="text/javascript" src="./js/main.js" defer></script>
 </body>
-
 </html>
