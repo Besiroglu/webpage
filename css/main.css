@@ -66,6 +66,7 @@ a:active {
   width: 100%;
   display: block;
   text-align: left;
+  font-weight: 600;
 }
 span:lang(ja) {
   font-family: sans-serif;
@@ -138,8 +139,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 p, li, a, span, section, div {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 18px;
+  line-height: 144%;
 }
 li {
   margin-bottom: 8px;
