@@ -7,6 +7,7 @@ ga('create', 'UA-53150914-2', 'auto');
 ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
 
+/*
 // MathJax
 init_mathjax = function() {
   if (window.MathJax) {
@@ -26,13 +27,4 @@ init_mathjax = function() {
 }
 init_mathjax();
 
-// Show more/less text
-$('.show-more').click(function(){
-  var $this = $(this);
-  $this.toggleClass('show-more');
-  if($this.hasClass('show-more')){
-    $this.text('show more');
-  } else {
-    $this.text('show less');
-  }
-});
+ */
