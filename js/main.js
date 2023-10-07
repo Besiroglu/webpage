@@ -7,39 +7,32 @@ ga('create', 'UA-53150914-2', 'auto');
 ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
 
-/*
-// MathJax
-init_mathjax = function() {
-  if (window.MathJax) {
-    // MathJax loaded
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-      },
-      displayAlign: 'left', // Change this to 'center' to center equations.
-      "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-      }
-    });
-    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-  }
-}
-init_mathjax();
-
- */
-
 const toggleTheme = () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme")
-    if (currentTheme === "dark") {
-        document.documentElement.setAttribute("data-theme", "light")
-    } else {
-        document.documentElement.setAttribute("data-theme", "dark")
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    let newTheme = "light";
+    if (currentTheme === "light") {
+        newTheme = "dark";
     }
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+
     document.querySelector(".themeToggle").addEventListener("click", toggleTheme);
+
+    const htmlTag = document.documentElement;
+    const themeToggleButton = document.getElementById("theme-toggle-button");
+
+    // Check for user's preference and set initial theme
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        htmlTag.setAttribute('data-theme', 'dark');
+    }
+
     // Cache the button element for better performance
     const btn = document.querySelector('.toTop__btn');
 
@@ -52,15 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             btn.classList.remove('show');
         }
-    }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const htmlTag = document.documentElement;
-    const themeToggleButton = document.getElementById("theme-toggle-button");
-
-    // Check for user's preference and set initial theme
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        htmlTag.setAttribute('data-theme', 'dark');
     }
 });
