@@ -8,15 +8,21 @@ ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
 
 const toggleTheme = () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme")
-    if (currentTheme === "dark") {
-        document.documentElement.setAttribute("data-theme", "light")
-    } else {
-        document.documentElement.setAttribute("data-theme", "dark")
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    let newTheme = "light";
+    if (currentTheme === "light") {
+        newTheme = "dark";
     }
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+
     document.querySelector(".themeToggle").addEventListener("click", toggleTheme);
 
     const htmlTag = document.documentElement;
